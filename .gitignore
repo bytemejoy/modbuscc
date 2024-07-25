@@ -36,10 +36,6 @@
 /bazel-*
 external
 
-# Compile commands.
-compile_commands.json
-external
-
 # LSP.
 compile_commands.json
 .cache/
