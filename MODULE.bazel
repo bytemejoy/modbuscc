@@ -1,0 +1,20 @@
+module(
+    name = "modbus",
+    version = "0.0.1",
+)
+
+# Libraries.
+bazel_dep(name = "abseil-cpp", version = "20240116.2")
+bazel_dep(name = "googletest", version = "1.15.0")
+# Tooling.
+bazel_dep(name = "hedron_compile_commands", dev_dependency = True)
+# git_override(
+#     module_name = "hedron_compile_commands",
+#     remote = "https://github.com/hedronvision/bazel-compile-commands-extractor.git",
+#     commit = "0e990032f3c5a866e72615cf67e5ce22186dcb97",
+# )
+git_override(
+    module_name = "hedron_compile_commands",
+    remote = "https://github.com/eugeneo/bazel-compile-commands-extractor.git",
+    commit = "844279a911d0a0adca480b299799f03f65290cce",
+)
